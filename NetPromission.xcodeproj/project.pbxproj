@@ -13,6 +13,8 @@
 		66C4110F255BEC6B008AF4A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66C4110E255BEC6B008AF4A7 /* Assets.xcassets */; };
 		66C41112255BEC6B008AF4A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C41110255BEC6B008AF4A7 /* LaunchScreen.storyboard */; };
 		66C41120255BF7D4008AF4A7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 66C4111F255BF7D4008AF4A7 /* Alamofire */; };
+		66C41124255CDF8C008AF4A7 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 66C41123255CDF8C008AF4A7 /* SnapKit */; };
+		66C41128255CE1F4008AF4A7 /* NetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C41127255CE1F4008AF4A7 /* NetTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		66C4110E255BEC6B008AF4A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66C41111255BEC6B008AF4A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66C41113255BEC6B008AF4A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66C41127255CE1F4008AF4A7 /* NetTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C41120255BF7D4008AF4A7 /* Alamofire in Frameworks */,
+				66C41124255CDF8C008AF4A7 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				66C4110E255BEC6B008AF4A7 /* Assets.xcassets */,
 				66C41110255BEC6B008AF4A7 /* LaunchScreen.storyboard */,
 				66C41113255BEC6B008AF4A7 /* Info.plist */,
+				66C41127255CE1F4008AF4A7 /* NetTools.swift */,
 			);
 			path = NetPromission;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			name = NetPromission;
 			packageProductDependencies = (
 				66C4111F255BF7D4008AF4A7 /* Alamofire */,
+				66C41123255CDF8C008AF4A7 /* SnapKit */,
 			);
 			productName = NetPromission;
 			productReference = 66C41102255BEC6B008AF4A7 /* NetPromission.app */;
@@ -114,6 +120,7 @@
 			mainGroup = 66C410F9255BEC6B008AF4A7;
 			packageReferences = (
 				66C4111E255BF7D4008AF4A7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				66C41122255CDF8C008AF4A7 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 66C41103255BEC6B008AF4A7 /* Products */;
 			projectDirPath = "";
@@ -142,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66C4110A255BEC6B008AF4A7 /* ViewController.swift in Sources */,
+				66C41128255CE1F4008AF4A7 /* NetTools.swift in Sources */,
 				66C41106255BEC6B008AF4A7 /* AppDelegate.swift in Sources */,
 				66C41108255BEC6B008AF4A7 /* SceneDelegate.swift in Sources */,
 			);
@@ -345,8 +353,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		66C41122255CDF8C008AF4A7 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -356,6 +372,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66C4111E255BF7D4008AF4A7 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		66C41123255CDF8C008AF4A7 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66C41122255CDF8C008AF4A7 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
